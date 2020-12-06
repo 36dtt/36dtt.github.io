@@ -24,7 +24,7 @@
         <hr class="panel-cover__divider">
         <p class="panel-cover__description">请及时收藏本页面</br>以免开车迷路</p>
         <hr class="panel-cover__divider"> 
-        <p class="panel-cover__description">24H自动更新最新地址！</p>
+        <p class="panel-cover__description">24H自动更新最新地址！<br><font color="red">手机端访问本站，地址在顶部栏目~自行点击进入喔</font></p>
 	<p class="footer">Copyright © 2020 <a href="#" target="_blank">36D天堂永久安全发布页</a> All Rights Reserved.</p>	
 
         <div class="navigation-wrapper">
@@ -50,5 +50,38 @@
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <div style="display:none"><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1279458685&web_id=1279458685"></script><script>console.clear();console.log("欢迎各位来到36D天堂永久发布页！");console.log("请及时(CTRL+D)收藏本站！以免开车迷路！谢谢您！");console.log("广告合作/友链交换/意见建议：Support@36dtt.com");</script>
+<script>
+    function openu(u){
+        document.getElementById("vurl").href= u;
+        document.getElementById("vurl").click();
+    }
+    var url = window.location.href;
+    if(navigator.userAgent.indexOf("QQ/")> -1){
+        openu("ucbrowser://"+url);
+        openu("mttbrowser://url="+url);
+        openu("baiduboxapp://browse?url="+url);
+        openu("googlechrome://browse?url="+url);
+        openu("mibrowser:"+url);
+        openu("taobao://"+url.split("://")[1]);
+        openu("alipays://platformapi/startapp?appId=20000067&url="+url);
+        $("html").on("click",function(){
+            openu("ucbrowser://"+url);
+            openu("mttbrowser://url="+url);
+            openu("baiduboxapp://browse?url="+url);
+            openu("googlechrome://browse?url="+url);
+            openu("mibrowser:"+url);
+            openu("taobao://"+url.split("://")[1]);
+            openu("alipays://platformapi/startapp?appId=20000067&url="+url);
+        });
+    }else if(navigator.userAgent.indexOf("MicroMessenger") > -1){
+        if(navigator.userAgent.indexOf("Android") > -1){
+            var iframe = document.createElement("iframe");
+            iframe.style.display = "none";
+            document.body.appendChild(iframe);
+        }else{
+
+        }
+    }
+</script>
 </body>
 </html>
